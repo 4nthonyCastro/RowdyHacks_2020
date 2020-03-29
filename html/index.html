@@ -1,0 +1,93 @@
+<html>
+<div id = "home-page">
+
+<!-- Head of index.html -->
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<h2>Essentials-Only</h2>	
+</head>
+
+<!-- Body of index.html -->
+<body>
+
+    <div id = "pager">
+    <ul>
+	    <li><a class = "page" href="index.html">Home</a></li>
+	    <li><a class= "page" href="about.html">About Us</a></li>
+	    <li class = "dropdown">
+	    <a class = "right-page" href="javascript:void(0)" class="dropbtn">More</a>
+	      <div class = "dropdown-content">
+		      <a href="education.html">Educational</a>
+		      <a href="testing.html">Testing Facilities</a>
+	      </div>
+	    </li>
+    </ul>
+    </div>
+<br>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://static01.nyt.com/images/2020/03/29/world/29virus-briefing-top1/merlin_170707848_de9dc828-5121-4c92-a877-5c19241db60d-superJumbo.jpg?quality=90&auto=webp" style="width:100%">
+  <div class="text">Preparing and Combating COVID-19</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://miro.medium.com/max/14720/1*aNs_ckGOmjN1ZLLm2CrHBw.jpeg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://azbigmedia.com/wp-content/uploads/2017/11/doctor-shortage.jpg" style="width:100%">
+  <div class="text_three">We are Essentials-Only</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+
+<!-- Javascript for Slide Show -->
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 8000); // Change image every 10 seconds
+}
+</script>
+
+<br>
+
+<!-- Javascript for Button -->
+<p id="OK_BOOMER"</p>
+<button onclick="myFunction()"><b>DONATE</b></button>
+	<script>
+		function myFunction() {
+			document.getElementById("OK_BOOMER").innerHTML = "Stay In Doors!!!";
+		}
+	</script>
+</body>
+</div>
+</html>
